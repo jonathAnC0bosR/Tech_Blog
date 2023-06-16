@@ -5,12 +5,15 @@
   "main": "server.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "node server.js"
+    "start": "node server.js",
+    "build-css": "tailwindcss build style.css -o public/css/style.css",
+    "seed": "node seeds/seed.js"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "autoprefixer": "^10.4.14",
     "bcrypt": "^5.1.0",
     "connect-session-sequelize": "^7.1.7",
     "dotenv": "^16.2.0",
@@ -18,6 +21,11 @@
     "express-handlebars": "^7.0.7",
     "express-session": "^1.17.3",
     "mysql2": "^3.3.5",
-    "sequelize": "^6.32.0"
+    "postcss": "^8.4.24",
+    "sequelize": "^6.32.0",
+    "vanilla-framework": "^3.15.0"
+  },
+  "devDependencies": {
+    "tailwindcss": "^3.3.2"
   }
 }
