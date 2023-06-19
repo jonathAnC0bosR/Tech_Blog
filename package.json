@@ -7,7 +7,8 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "node server.js",
     "build-css": "tailwindcss build style.css -o public/css/style.css",
-    "seed": "node seeds/seed.js"
+    "seed": "node seeds/seed.js",
+    "dev": "nodemon server.js"
   },
   "keywords": [],
   "author": "",
@@ -22,10 +23,10 @@
     "express-session": "^1.17.3",
     "mysql2": "^3.3.5",
     "postcss": "^8.4.24",
-    "sequelize": "^6.32.0",
-    "vanilla-framework": "^3.15.0"
+    "sequelize": "^6.32.0"
   },
   "devDependencies": {
+    "nodemon": "^2.0.22",
     "tailwindcss": "^3.3.2"
   }
 }
