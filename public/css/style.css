@@ -1,3 +1,21 @@
-ul.links {
-    background-color: black;
+div.post {
+    margin-top: 25px;
+}
+
+h2.post-title a {
+    text-decoration: none;
+}
+
+div.post-creator p {
+    color:white;
+    font-size: smaller;
+}
+
+h1.main-title {
+    width: 280px;
+    border-radius: 8px;
+}
+
+div.main-content {
+    height: 100vh;
 }

@@ -1,0 +1,21 @@
+{{#each posts as |post|}}
+<div class="post container border border-black border-2">
+  <div class="content">
+       <div class="row bg-dark">
+          <div class="col">
+            <h2 class="post-title">
+                <a class="text-light" href="/post/{{post.id}}"> {{post.post_title}} </a>
+            </h2>
+        </div>
+        <div class="col post-creator d-flex justify-content-end">
+            <p>Posted by {{post.user_username}} on {{format_date post.date_created}} </p>
+        </div>
+       </div>
+         <div>
+            <p>
+             {{post.post_content}}
+            </p>
+        </div>
+  </div>
+</div>
+{{/each}}
