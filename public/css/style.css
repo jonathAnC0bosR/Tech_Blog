@@ -19,3 +19,7 @@ h1.main-title {
 div.main-content {
     height: 100vh;
 }
+
+form {
+    width: 400px;
+}
