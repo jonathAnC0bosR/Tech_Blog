@@ -13,6 +13,7 @@ Post.init(
         },
         post_title: {
             type: DataTypes.STRING,
+            allowNull: false,
         },
         post_content: {
             type: DataTypes.STRING,
