@@ -23,3 +23,7 @@ div.main-content {
 form {
     width: 400px;
 }
+
+form.new-post {
+    width: 800px;
+}

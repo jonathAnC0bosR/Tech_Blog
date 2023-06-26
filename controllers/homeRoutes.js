@@ -26,6 +26,22 @@ router.get('/', async (req, res) => {
     }
 });
 
+router.get('/posts', async (req, res) => {
+    try{
+        const posts = await Post.findAll({
+            include: [
+                {
+                    model: User,
+                },
+            ],
+        });
+
+        res.status(200).json(posts);
+    } catch(err) {
+        res.status(500).json(err);
+    }
+})
+
 router.get('/post/:id', async (req, res) => {
     try {
         
@@ -58,5 +74,9 @@ router.get('/login', (req, res) => {
   
     res.render('login');
   });
+
+router.get('/home', withAuth, (req, res) => {
+    res.render('home');
+});
 
 module.exports = router;
