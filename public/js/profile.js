@@ -1,3 +1,7 @@
+const newPostButton = document.querySelector('#new-post');
+const newPostForm = document.querySelector('#none-div');
+
+
 const newPostFormHandler =  async (e) => {
     e.preventDefault();
 
@@ -15,13 +19,20 @@ const newPostFormHandler =  async (e) => {
         
 
         if(response.ok) {
-            // document.location.replace('/');
-            console.log(response);
+            document.location.replace('/');
         } else {
             alert('Failed to create post');
         }
     }
 };
+
+newPostButton.addEventListener('click', () => {
+    if(newPostForm.style.display === 'none') {
+        newPostForm.style.display = 'block';
+    } else {
+        newPostForm.style.display ='none';
+    }
+});
 
 document.querySelector('#new-post-form')
     .addEventListener('submit', newPostFormHandler);
