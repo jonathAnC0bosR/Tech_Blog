@@ -2,11 +2,11 @@
     {
         "post_title": "Post test",
         "post_content": "Post test content",
-        "user_username": "Jonathan"
+        "user_id": "1"
     },
     {
         "post_title": "Tech post",
         "post_content": "Post content",
-        "user_username": "Amiko"
+        "user_id": "2"
     }
 ]

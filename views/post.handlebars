@@ -1,0 +1,42 @@
+<div class="post container border border-black">
+    <div class="content">
+        <div class="row bg-dark">
+            <div class="col">
+                <h2 class="post-title text-light"> 
+                    {{post.post_title}}
+                </h2>  
+            </div>
+            <div class="col post-creator d-flex justify-content-end">
+                <p>Posted by {{post.user.username}} on {{format_date post.date_created}} </p>
+            </div>
+        </div>
+        <div>
+            <p>
+                {{post.post_content}}
+            </p>
+        </div>
+    </div>
+</div>
+<div class="container d-flex justify-content-center my-3">
+    <div class="">
+        <button type="button" id="new-comment">+ New Comment</button>
+    </div>
+</div>
+<div id="hidden-div" style="display: none">
+    <div id="comment-form" class="form container border border-black border-3 my-3">
+        <div class="row ">
+            <div class="bg-dark"><h2>j</h2></div>
+            <form action="new-comment" id="new-comment-form">
+            <label for="comment">Comment</label>
+            <div class="mb-2">
+                <textarea id="content" class="form-control" rows="5"></textarea>
+            </div>
+            <div class="mb-3 d-flex justify-content-center">
+                <button type="submit" class="btn btn-dark">Submit</button>
+            </div>
+        </form>
+        </div>
+    </div>
+</div>
+
+<script src="/js/newCom.js"></script>
