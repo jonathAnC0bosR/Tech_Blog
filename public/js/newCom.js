@@ -2,16 +2,17 @@ const newCommentFormHandler = async (e) => {
     e.preventDefault();
 
     const content = document.getElementById('content').value.trim();
+    const post_id = document.getElementById('current-post').getAttribute('data-post-id');
 
-    if(content) {
-        const response = await fetch('/api/comment', {
+    if(content && post_id ) {
+        const response = await fetch('/api/comment/', {
             method: 'POST', 
-            body: JSON.stringify({ comment }),
+            body: JSON.stringify({ content, post_id }),
             headers: { 'Content-Type': 'application/json' },
         });
 
         if(response.ok) {
-            document.location.replace('/post/:id');
+            document.location.reload();
         } else {
             alert('Failed to create comment');
         }
@@ -31,3 +32,4 @@ newCommentBtn.addEventListener('click' , () => {
 
 document.querySelector('#comment-form')
         .addEventListener('submit', newCommentFormHandler);
+

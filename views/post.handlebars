@@ -1,4 +1,4 @@
-<div class="post container border border-black">
+<div class="post container border border-black" id="current-post" data-post-id= {{post.id}} >
     <div class="content">
         <div class="row bg-dark">
             <div class="col">
@@ -17,8 +17,29 @@
         </div>
     </div>
 </div>
+
+{{#each comments as |comment|}}
+    <div class="container border border-primmary border-2 my-4">
+        <div class="content">
+            <div class="row bg-dark-subtle">
+                <div class="col">
+                    <h4 class="text-dark">
+                        {{comment.user.username}}
+                    </h4>
+                </div>
+                <div class="col text-dark d-flex justify-content-end">
+                    <p style="font-size: 13px;"> {{format_date comment.date_create}} </p>
+                </div>
+            </div>
+            <div>
+                <p> {{comment.content}} </p>
+            </div>
+        </div>
+    </div>
+{{/each}}
+
 <div class="container d-flex justify-content-center my-3">
-    <div class="">
+    <div class=""> 
         <button type="button" id="new-comment">+ New Comment</button>
     </div>
 </div>
