@@ -26,6 +26,8 @@ To use the tech blog online all you have to do is visit this link
 
 https://shielded-dawn-21497-41f00b0f5c87.herokuapp.com/
 
+![alt-text](./Screenshot.png);
+
 otherwise clone the repository, run npm i to install all the dependencies and run the seeds. 
 
 ## Licence
