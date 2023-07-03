@@ -38,11 +38,14 @@
     </div>
 {{/each}}
 
+{{#if logged_in}}
 <div class="container d-flex justify-content-center my-3">
     <div class=""> 
         <button type="button" id="new-comment">+ New Comment</button>
     </div>
 </div>
+{{/if}}
+
 <div id="hidden-div" style="display: none">
     <div id="comment-form" class="form container border border-black border-3 my-3">
         <div class="row ">

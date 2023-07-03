@@ -41,7 +41,7 @@ router.get('/posts', async (req, res) => {
     }
 })
 
-router.get('/post/:id', withAuth, async (req, res) => {
+router.get('/post/:id', async (req, res) => {
     try {
         
         const postData = await Post.findByPk(req.params.id, {
@@ -80,5 +80,14 @@ router.get('/home', withAuth, (req, res) => {
         logged_in: req.session.logged_in
     });
 });
+
+router.get('/signup', (req, res) => {
+    if(req.session.logged_in) {
+        res.redirect('/');
+        return;
+    }
+
+    res.render('signup');
+})
 
 module.exports = router;

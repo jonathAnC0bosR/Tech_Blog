@@ -28,3 +28,6 @@ form.new-post {
     width: 800px;
 }
 
+div.sngForm, div.logFrm {
+    margin-top: 220px;
+}
