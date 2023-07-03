@@ -1,12 +1,12 @@
 [
     {
-        "post_title": "Post test",
-        "post_content": "Post test content",
+        "post_title": "Javascript is hard",
+        "post_content": "Working with javascript can be challenging sometimes",
         "user_id": "1"
     },
     {
-        "post_title": "Tech post",
-        "post_content": "Post content",
+        "post_title": "Fetch requests",
+        "post_content": "Post request are the hardest to work with!",
         "user_id": "2"
     }
 ]

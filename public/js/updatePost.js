@@ -1,6 +1,7 @@
+const post_id = document.getElementById('form-update-delete').getAttribute('data-post-id');
+
 const updatePost = async () => {
 
-    const post_id = document.getElementById('form-update-delete').getAttribute('data-post-id');
     const post_title = document.getElementById('postTitle').value.trim();
     const post_content = document.getElementById('postContent').value.trim();
 
@@ -19,6 +20,23 @@ const updatePost = async () => {
     }
 };
 
+const deletePost = async () => {
+    if(post_id) {
+        const response = await fetch(`/api/post/${post_id}`, {
+            method: 'DELETE',
+        });
+
+        if(response.ok) {
+            document.location.replace('/home');
+        } else {
+            alert('Failed to delete post')
+        }
+    }
+};
+
 
 document.getElementById('updateBtn')
         .addEventListener('click', updatePost);
+
+document.getElementById('deleteBtn')
+        .addEventListener('click', deletePost);

@@ -1,11 +1,11 @@
 [
     {
-        "content": "This is a comment",
+        "content": "I agree!",
         "user_id": 1,
         "post_id": 1
     },
     {
-        "content": "This is the second comment",
+        "content": "Put can be really hard too!",
         "user_id": 2,
         "post_id": 2
     }
